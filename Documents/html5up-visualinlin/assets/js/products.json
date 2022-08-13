@@ -1,0 +1,31 @@
+{
+    "items": [
+        {
+            "sys":{"id": "1"},
+            "fields": {
+                "name": "deep",
+                "price": 45,
+                "image": {
+                    "fields": {"file": {
+                        "url": "/images/deep.jpg"
+                    }}
+                }
+            }
+        },
+
+        {
+            "sys":{"id": "2"},
+            "fields": {
+                "name": "tempest",
+                "price": 75,
+                "image": {
+                    "fields": {"file": {
+                        "url": "/images/tempest.jpg"
+                    }}
+                }
+
+            }
+        }
+
+    ]
+}
