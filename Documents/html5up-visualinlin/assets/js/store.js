@@ -1,12 +1,3 @@
-// const cartBtn = document.querySelector('.fa-shopping-cart')
-// const closeBtn = document.querySelector('#close-page')
-// const clearCart = document.querySelector('.clear')
-// const cartDOM = document.querySelector('.cart')
-// const cartWrapper = document.querySelector('.cart-wrapper')
-// const cartTotal = document.querySelector('.total')
-// const cartContent = document.querySelector('.cart-content')
-// const productDOM = document.querySelector('.product-list')
-// const removeBtn = document.getElementsByClassName('remove')
 
 if(document.readyState == 'loading'){
     document.addEventListener('DOMContentLoaded', ready)
@@ -108,13 +99,14 @@ function removeCartItems(event){
 function updateCartTotal(){
     const cartContent = document.querySelectorAll('.product-detail')
     let total = 0
+    console.log('cartContent',cartContent.length)
     for(let i = 0; i < cartContent.length; i++){
         cartRow = cartContent[i]
         // console.log(cartRow)
         const priceElement = cartRow.children[1].textContent
         const price = parseInt(priceElement.slice(1))
         const quantity = parseInt(document.querySelectorAll('.cart-quantity')[0].children[0].value)
-        total = total +(price * quantity)
+        total += price * quantity
     }
     document.querySelector('.total').innerText = total
 }
